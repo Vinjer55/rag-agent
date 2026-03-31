@@ -1,0 +1,37 @@
+Azure RAG System - Sample Document
+
+This is a sample document to test your RAG (Retrieval-Augmented Generation) system.
+
+What is RAG?
+RAG stands for Retrieval-Augmented Generation. It's a technique that combines information retrieval with language model generation to produce more accurate and grounded responses.
+
+Key Components:
+1. Document Storage: Documents are stored and indexed for quick retrieval
+2. Embeddings: Text is converted into vector representations
+3. Vector Search: Similar documents are found using semantic similarity
+4. Generation: A language model generates answers based on retrieved context
+
+Benefits of RAG:
+- Reduces hallucinations by grounding responses in actual documents
+- Allows AI to access up-to-date information without retraining
+- Enables private knowledge bases for enterprises
+- Provides citations and sources for answers
+
+Azure AI Search:
+Azure AI Search (formerly Azure Cognitive Search) is a cloud search service that provides infrastructure, APIs, and tools for building rich search experiences. It supports both traditional keyword search and modern vector search capabilities.
+
+Hybrid Search:
+Combining keyword-based search with vector similarity search often produces better results than either approach alone. This is called hybrid search.
+
+Semantic Search:
+Semantic search uses AI models to understand the meaning and intent behind queries, rather than just matching keywords. Azure AI Search includes built-in semantic ranking capabilities.
+
+Best Practices:
+- Choose appropriate chunk sizes (typically 500-1500 tokens)
+- Use overlap between chunks to maintain context
+- Implement proper error handling and retry logic
+- Monitor costs and set budget alerts
+- Regularly evaluate retrieval quality
+
+Production Considerations:
+When deploying to production, consider scaling, monitoring, security, cost optimization, and user feedback loops. Azure provides comprehensive tools for all these aspects.
