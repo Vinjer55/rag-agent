@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from azure.core.credentials import AzureKeyCredential
 from azure.search.documents import SearchClient
 from azure.storage.blob import BlobServiceClient
-from ingest import chunk_text, get_embedding
+from src.services.embedding_service import get_embedding
 
 logger = logging.getLogger(__name__)
 
@@ -102,3 +102,14 @@ def sanitize_filename(filename):
     name = os.path.splitext(filename)[0]  # Remove extension
     name = re.sub(r'[^a-zA-Z0-9_-]', '_', name)  # Replace invalid chars
     return name
+
+def chunk_text(text, chunk_size=1000, overlap=200):
+    """Simple chunking strategy with overlap"""
+    chunks = []
+    start = 0
+    while start < len(text):
+        end = start + chunk_size
+        chunk = text[start:end]
+        chunks.append(chunk)
+        start = end - overlap
+    return chunks

@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from query import ask_question
+from src.services.query_service import ask_question
 
 chat_router = APIRouter(tags=["Chat"])
 
