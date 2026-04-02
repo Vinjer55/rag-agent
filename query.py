@@ -37,11 +37,13 @@ def search_documents(query, top_k=3):
         fields="content_vector"
     )
     
+    # Enable semantic ranking in search
     results = search_client.search(
         search_text=query,
         vector_queries=[vector_query],
-        select=["content", "title", "source"],
-        top=top_k
+        query_type="semantic",
+        semantic_configuration_name="my-semantic-config",
+        top=3
     )
     
     return list(results)
