@@ -75,7 +75,7 @@ def generate_answer(query, context_docs):
     
     return response.choices[0].message.content
 
-def ask_question(query):
+async def ask_question(query):
     """Complete RAG pipeline"""
     print(f"\nQuestion: {query}\n")
     
@@ -94,5 +94,5 @@ def ask_question(query):
     return answer
 
 # Usage
-if __name__ == "__main__":
-    ask_question("What are the main topics covered in the documents?")
+# if __name__ == "__main__":
+#     ask_question("What are the main topics covered in the documents?")
