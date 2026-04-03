@@ -1,0 +1,180 @@
+2026-04-04 02:52:41,937 [INFO] src.services.query_service - Session 3a2df6cf-d29b-481f-a63d-f909dead2571: Loaded 0 messages
+2026-04-04 02:52:44,963 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:52:45,042 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34654'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '4d17258e-2f8e-11f1-9221-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 02:52:47,379 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '4d17258e-2f8e-11f1-9221-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 18:52:47 GMT'
+2026-04-04 02:52:47,386 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 02:52:47,386 [INFO] src.services.query_service - 1. sample_document.txt (score: 0.03)
+2026-04-04 02:52:47,389 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 02:52:47,390 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 02:54:01,257 [INFO] src.services.query_service - Session 1492e016-31aa-4b0d-a2f5-8f424d262c8d: Loaded 0 messages
+2026-04-04 02:54:04,092 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:54:04,158 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34654'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '7c3f6b8e-2f8e-11f1-a46c-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 02:54:06,346 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '7c3f6b8e-2f8e-11f1-a46c-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 18:54:06 GMT'
+2026-04-04 02:54:06,391 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 02:54:06,400 [INFO] src.services.query_service - 1. sample_document.txt (score: 0.03)
+2026-04-04 02:54:06,402 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 02:54:06,409 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 02:54:08,545 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:57:09,879 [INFO] src.services.query_service - Session 46898c23-6c1c-4f52-98f6-deefc392d2fe: Loaded 0 messages
+2026-04-04 02:57:10,852 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:57:10,916 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34568'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': 'eb90640e-2f8e-11f1-a53d-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 02:57:12,958 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': 'eb90640e-2f8e-11f1-a53d-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 18:57:13 GMT'
+2026-04-04 02:57:12,961 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 02:57:12,961 [INFO] src.services.query_service - 1. FAQs_Virtual Pag-IBIG.html (score: 0.02)
+2026-04-04 02:57:12,962 [INFO] src.services.query_service - 2. sample_document.txt (score: 0.02)
+2026-04-04 02:57:12,962 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.03)
+2026-04-04 02:57:15,431 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:03,112 [INFO] src.services.query_service - Session 46898c23-6c1c-4f52-98f6-deefc392d2fe: Loaded 2 messages
+2026-04-04 02:58:04,521 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:04,524 [INFO] src.services.query_service - Reformulated query: What are the benefits of using Virtual Pag-IBIG?
+2026-04-04 02:58:07,618 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:07,748 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34574'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '0d70060b-2f8f-11f1-b15a-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 02:58:08,123 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '0d70060b-2f8f-11f1-b15a-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 18:58:08 GMT'
+2026-04-04 02:58:08,135 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 02:58:08,136 [INFO] src.services.query_service - 1. FAQs_Virtual Pag-IBIG.html (score: 0.02)
+2026-04-04 02:58:08,137 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.02)
+2026-04-04 02:58:08,138 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 02:58:10,487 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:52,368 [INFO] src.services.query_service - Session 1492e016-31aa-4b0d-a2f5-8f424d262c8d: Loaded 2 messages
+2026-04-04 02:58:53,768 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:53,769 [INFO] src.services.query_service - Reformulated query: What are the benefits of using Retrieval-Augmented Generation (RAG) in AI responses?
+2026-04-04 02:58:54,769 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 02:58:54,879 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34681'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '2987eed6-2f8f-11f1-a746-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 02:58:55,226 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '2987eed6-2f8f-11f1-a746-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 18:58:55 GMT'
+2026-04-04 02:58:55,229 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 02:58:55,230 [INFO] src.services.query_service - 1. sample_document.txt (score: 0.03)
+2026-04-04 02:58:55,231 [INFO] src.services.query_service - 2. sample_document.txt (score: 0.03)
+2026-04-04 02:58:55,232 [INFO] src.services.query_service - 3. sample_document.txt (score: 0.03)
+2026-04-04 02:58:57,965 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 03:10:19,793 [INFO] src.services.query_service - 
+Question: what is philhealth?
+
+2026-04-04 03:10:19,821 [INFO] src.services.query_service - Session 6847308f-9e21-4de5-aff9-0c5b2e733c61: Loaded 0 messages
+2026-04-04 03:10:22,019 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 03:10:22,079 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34585'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': 'c3223438-2f90-11f1-9096-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 03:10:24,090 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': 'c3223438-2f90-11f1-9096-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Fri, 03 Apr 2026 19:10:24 GMT'
+2026-04-04 03:10:24,094 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 03:10:24,094 [INFO] src.services.query_service - 1. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 03:10:24,095 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.02)
+2026-04-04 03:10:24,095 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 03:10:26,490 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
