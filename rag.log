@@ -178,3 +178,44 @@ Response headers:
 2026-04-04 03:10:24,095 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.02)
 2026-04-04 03:10:24,095 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
 2026-04-04 03:10:26,490 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 18:31:38,947 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 18:35:27,862 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 18:36:23,298 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 18:39:27,864 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 18:39:27,883 [INFO] src.services.query_service - Session 8f216a60-4b3d-4fc3-8bc6-49d6dbfb0a30: Loaded 0 messages
+2026-04-04 18:39:30,687 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 18:39:30,761 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34561'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '8fefed62-3012-11f1-bdc1-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 18:39:32,913 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '8fefed62-3012-11f1-bdc1-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Sat, 04 Apr 2026 10:39:32 GMT'
+2026-04-04 18:39:32,917 [INFO] src.services.query_service - Retrieved documents:
+2026-04-04 18:39:32,918 [INFO] src.services.query_service - 1. sample_document.txt (score: 0.03)
+2026-04-04 18:39:32,918 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 18:39:32,920 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
+2026-04-04 18:39:35,646 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
