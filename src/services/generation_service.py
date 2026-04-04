@@ -50,11 +50,17 @@ def generate_answer_with_context(
         model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
         messages=messages,
         temperature=0.3,
-        max_tokens=800
+        max_tokens=800,
+        stream=True
     )
     
-    return response.choices[0].message.content
-
+    # Yield chunks as they arrive with safety checks
+    for chunk in response:
+        if chunk.choices and len(chunk.choices) > 0:
+            delta = chunk.choices[0].delta
+            if delta.content:
+                yield delta.content
+                
 def reformulate_query(current_query: str, history: list):
     # Build context from last 3 turns
     recent_context = history[-6:] if len(history) > 6 else history

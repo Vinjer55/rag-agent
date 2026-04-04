@@ -219,3 +219,59 @@ Response headers:
 2026-04-04 18:39:32,918 [INFO] src.services.query_service - 2. FAQs_Virtual Pag-IBIG.html (score: 0.01)
 2026-04-04 18:39:32,920 [INFO] src.services.query_service - 3. FAQs_Virtual Pag-IBIG.html (score: 0.01)
 2026-04-04 18:39:35,646 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 18:59:25,122 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 18:59:25,140 [INFO] src.services.query_service - Session 25f8a79a-6042-4512-81d4-ce06d815eb23: Loaded 0 messages
+2026-04-04 18:59:27,096 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 18:59:27,138 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34561'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '5908b4d7-3015-11f1-83a0-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 18:59:29,106 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '5908b4d7-3015-11f1-83a0-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Sat, 04 Apr 2026 10:59:27 GMT'
+2026-04-04 18:59:30,409 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 19:01:05,666 [INFO] src.services.query_service - 
+Question: what is rag?
+
+2026-04-04 19:01:05,685 [INFO] src.services.query_service - Session 733b00f4-306b-457b-91bc-787b780ba20e: Loaded 0 messages
+2026-04-04 19:01:07,686 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2024-02-01 "HTTP/1.1 200 OK"
+2026-04-04 19:01:07,838 [INFO] azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://search-rag-dev-test.search.windows.net/indexes('documents-index')/docs/search.post.search?api-version=REDACTED'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/json'
+    'Content-Length': '34561'
+    'api-key': 'REDACTED'
+    'Accept': 'application/json;odata.metadata=none'
+    'x-ms-client-request-id': '950e42c8-3015-11f1-99ad-48e244d06b9a'
+    'User-Agent': 'azsdk-python-search-documents/11.6.0 Python/3.12.4 (Windows-10-10.0.19045-SP0)'
+A body is sent with the request
+2026-04-04 19:01:09,824 [INFO] azure.core.pipeline.policies.http_logging_policy - Response status: 200
+Response headers:
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json; odata.metadata=none; odata.streaming=true; charset=utf-8'
+    'Content-Encoding': 'REDACTED'
+    'Vary': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'Preference-Applied': 'REDACTED'
+    'OData-Version': 'REDACTED'
+    'request-id': '950e42c8-3015-11f1-99ad-48e244d06b9a'
+    'elapsed-time': 'REDACTED'
+    'Date': 'Sat, 04 Apr 2026 11:01:09 GMT'
+2026-04-04 19:01:11,152 [INFO] httpx - HTTP Request: POST https://openai-rag-dev.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-02-01 "HTTP/1.1 200 OK"

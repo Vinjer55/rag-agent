@@ -1,4 +1,5 @@
 import logging
+import json
 
 from src.services.search_service import search_documents
 from src.services.generation_service import generate_answer_with_context, reformulate_query
@@ -6,7 +7,7 @@ from src.services.session_service import get_conversation_history, save_conversa
 
 logger = logging.getLogger(__name__)
 
-async def ask_question(query, session_id: str):
+def ask_question(query, session_id: str):
     logger.info(f"\nQuestion: {query}\n")
     
     # Get conversation history
@@ -24,33 +25,26 @@ async def ask_question(query, session_id: str):
     docs = search_documents(search_query, top_k=3)
     
     if not docs:
-        answer = "I couldn't find relevant information in the documents."
-        save_conversation_turn(session_id, query, answer)
-        return {
-            "answer": answer,
-            "sources": [],
-            "reformulated_query": search_query if history else None
-        }
+        yield "data: " + json.dumps({"type": "error", "content": "No relevant documents found"}) + "\n\n"
+        return
     
-    logger.info("Retrieved documents:")
-    for i, doc in enumerate(docs, 1):
-        logger.info(f"{i}. {doc['title']} (score: {doc['@search.score']:.2f})")
+    # Send sources first
+    yield "data: " + json.dumps({
+        "type": "sources",
+        "content": [{"title": doc["title"], "source": doc["source"]} for doc in docs]
+    }) + "\n\n"
     
-    # Generate answer with conversation context
-    answer = generate_answer_with_context(
-        query=query,
-        docs=docs,
-        history=history
-    )
+    # Stream the answer
+    full_answer = ""
+    for chunk in generate_answer_with_context(query, docs, history):
+        full_answer += chunk
+        yield "data: " + json.dumps({"type": "content", "content": chunk}) + "\n\n"
     
-    # Save this turn to conversation history
-    save_conversation_turn(session_id, query, answer)
+    # Send completion signal
+    yield "data: " + json.dumps({"type": "done"}) + "\n\n"
     
-    return {
-        "answer": answer,
-        "sources": docs,
-        "reformulated_query": search_query if history else None
-    }
+    # Save conversation
+    save_conversation_turn(session_id, query, full_answer)
     
 def needs_reformulation(query: str):
     standalone_indicators = ["what is", "define", "explain", "how to"]
